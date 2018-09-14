@@ -970,51 +970,46 @@ footer a:hover {
   footer {
     text-align: left;
   }
-  /* line 824, ../sass/styles.scss */
-  footer .footer-nav li {
-    display: inline-block;
-    padding: 0 10px;
-  }
 }
 
-/* line 832, ../sass/styles.scss */
+/* line 826, ../sass/styles.scss */
 .tab-content > .tab-pane {
   overflow: hidden;
   display: block;
   height: 0;
 }
 
-/* line 838, ../sass/styles.scss */
+/* line 832, ../sass/styles.scss */
 .tab-content > .active {
   height: auto;
 }
 
 @media (max-width: 768px) {
-  /* line 843, ../sass/styles.scss */
+  /* line 837, ../sass/styles.scss */
   .back-to-top {
     bottom: 15px;
   }
 
-  /* line 848, ../sass/styles.scss */
+  /* line 842, ../sass/styles.scss */
   #header #logo h1 {
     font-size: 28px;
   }
-  /* line 851, ../sass/styles.scss */
+  /* line 845, ../sass/styles.scss */
   #header #logo img {
     max-height: 40px;
   }
 
-  /* line 857, ../sass/styles.scss */
+  /* line 851, ../sass/styles.scss */
   #intro h2 {
     font-size: 28px;
   }
 
-  /* line 861, ../sass/styles.scss */
+  /* line 855, ../sass/styles.scss */
   #nav-menu-container {
     display: none;
   }
 
-  /* line 864, ../sass/styles.scss */
+  /* line 858, ../sass/styles.scss */
   #mobile-nav-toggle {
     display: inline;
   }
@@ -1025,42 +1020,42 @@ footer a:hover {
   		padding-left: 60px;
   	}
   }*/
-  /* line 875, ../sass/styles.scss */
+  /* line 869, ../sass/styles.scss */
   #intro p {
     width: 60%;
   }
-  /* line 878, ../sass/styles.scss */
+  /* line 872, ../sass/styles.scss */
   #intro .carousel-control-prev {
     width: 5%;
   }
-  /* line 881, ../sass/styles.scss */
+  /* line 875, ../sass/styles.scss */
   #intro .carousel-control-next {
     width: 5%;
   }
 }
 @media (min-width: 992px) {
-  /* line 889, ../sass/styles.scss */
+  /* line 883, ../sass/styles.scss */
   #testimonials .testimonial-item p {
     width: 80%;
   }
 }
 @media (min-width: 768px) {
-  /* line 897, ../sass/styles.scss */
+  /* line 891, ../sass/styles.scss */
   #contacto .contact-address {
     padding: 20px 0;
   }
-  /* line 900, ../sass/styles.scss */
+  /* line 894, ../sass/styles.scss */
   #contacto .contact-phone {
     padding: 20px 0;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   }
-  /* line 905, ../sass/styles.scss */
+  /* line 899, ../sass/styles.scss */
   #contacto .contact-email {
     padding: 20px 0;
   }
 }
-/* line 911, ../sass/styles.scss */
+/* line 905, ../sass/styles.scss */
 .spinner {
   position: absolute;
   top: 50%;
@@ -1076,7 +1071,7 @@ footer a:hover {
   -o-transition: visibility 200ms ease, opacity 200ms ease;
   transition: visibility 200ms ease, opacity 200ms ease;
 }
-/* line 925, ../sass/styles.scss */
+/* line 919, ../sass/styles.scss */
 .spinner > div {
   background-color: #333;
   height: 100%;
@@ -1086,27 +1081,27 @@ footer a:hover {
   animation: sk-stretchdelay 1.2s infinite ease-out;
   position: relative;
 }
-/* line 934, ../sass/styles.scss */
+/* line 928, ../sass/styles.scss */
 .spinner.on {
   visibility: visible;
   opacity: 1;
 }
-/* line 938, ../sass/styles.scss */
+/* line 932, ../sass/styles.scss */
 .spinner.rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
-/* line 942, ../sass/styles.scss */
+/* line 936, ../sass/styles.scss */
 .spinner.rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
-/* line 946, ../sass/styles.scss */
+/* line 940, ../sass/styles.scss */
 .spinner.rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
-/* line 950, ../sass/styles.scss */
+/* line 944, ../sass/styles.scss */
 .spinner.rect5 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
@@ -1130,7 +1125,7 @@ footer a:hover {
     -webkit-transform: scaleY(1);
   }
 }
-/* line 975, ../sass/styles.scss */
+/* line 969, ../sass/styles.scss */
 .send.off {
   visibility: hidden;
   opacity: 0;
