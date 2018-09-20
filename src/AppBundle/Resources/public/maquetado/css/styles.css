@@ -1058,11 +1058,13 @@ footer a:hover {
 /* line 905, ../sass/styles.scss */
 .spinner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /*top: 50%;
+  left: 50%;*/
+  display: inline-block;
+  position: relative;
   visibility: hidden;
   opacity: 0;
-  margin: 0 0 0 -25px;
+  margin: 0 0 0 -172px;
   width: 50px;
   height: 40px;
   text-align: center;
@@ -1071,7 +1073,7 @@ footer a:hover {
   -o-transition: visibility 200ms ease, opacity 200ms ease;
   transition: visibility 200ms ease, opacity 200ms ease;
 }
-/* line 919, ../sass/styles.scss */
+/* line 921, ../sass/styles.scss */
 .spinner > div {
   background-color: #333;
   height: 100%;
@@ -1081,28 +1083,28 @@ footer a:hover {
   animation: sk-stretchdelay 1.2s infinite ease-out;
   position: relative;
 }
-/* line 928, ../sass/styles.scss */
+/* line 930, ../sass/styles.scss */
 .spinner.on {
   visibility: visible;
   opacity: 1;
 }
-/* line 932, ../sass/styles.scss */
-.spinner.rect2 {
+/* line 934, ../sass/styles.scss */
+.spinner .rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
-/* line 936, ../sass/styles.scss */
-.spinner.rect3 {
+/* line 938, ../sass/styles.scss */
+.spinner .rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
-/* line 940, ../sass/styles.scss */
-.spinner.rect4 {
+/* line 942, ../sass/styles.scss */
+.spinner .rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
-/* line 944, ../sass/styles.scss */
-.spinner.rect5 {
+/* line 946, ../sass/styles.scss */
+.spinner .rect5 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
@@ -1125,8 +1127,13 @@ footer a:hover {
     -webkit-transform: scaleY(1);
   }
 }
-/* line 969, ../sass/styles.scss */
+/* line 971, ../sass/styles.scss */
 .send.off {
   visibility: hidden;
   opacity: 0;
+}
+
+/* line 977, ../sass/styles.scss */
+.error {
+  border: 2px solid #ff3300 !important;
 }

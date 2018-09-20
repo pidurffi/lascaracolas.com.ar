@@ -904,11 +904,13 @@ footer {
 
 .spinner {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	/*top: 50%;
+	left: 50%;*/
+	display: inline-block;
+	position: relative;
 	visibility: hidden;
 	opacity: 0;
-	margin: 0 0 0 -25px;
+	margin: 0 0 0 -172px;
 	width: 50px;
 	height: 40px;
 	text-align: center;
@@ -929,19 +931,19 @@ footer {
 		visibility: visible;
 		opacity: 1;
 	}
-	&.rect2 {
+	.rect2 {
 		-webkit-animation-delay: -1.1s;
 		animation-delay: -1.1s;
 	}
-	&.rect3 {
+	.rect3 {
 		-webkit-animation-delay: -1.0s;
 		animation-delay: -1.0s;
 	}
-	&.rect4 {
+	.rect4 {
 		-webkit-animation-delay: -0.9s;
 		animation-delay: -0.9s;
 	}
-	&.rect5 {
+	.rect5 {
 		-webkit-animation-delay: -0.8s;
 		animation-delay: -0.8s;
 	}
@@ -971,3 +973,8 @@ footer {
 		opacity: 0;
 	}
 }
+
+.error {
+  border: 2px solid #ff3300 !important;
+}
+

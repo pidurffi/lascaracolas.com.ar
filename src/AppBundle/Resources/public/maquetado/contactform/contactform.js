@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
     else var str = $(this).serialize();
-    $.ajax({
+    /*$.ajax({
       type: "POST",
       url: "contactform/contactform.php",
       data: str,
@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
         }
 
       }
-    });
+    });*/
     return false;
   });
 

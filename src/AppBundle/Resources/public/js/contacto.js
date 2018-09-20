@@ -13,32 +13,32 @@ var enviando = false;
 function validar_form() {
 	if(enviando) return false;
 	var errores = false;
-	var nombre = $('#form_nombre').val().trim();
-	var email = $('#form_email').val().trim();
-	var telefono = $('#form_telefono').val().trim();
+	var nombre = $('#name').val().trim();
+	var email = $('#email').val().trim();
+//	var telefono = $('#form_telefono').val().trim();
 	var mensaje = $('#form_mensaje').val().trim();
-	var fecha_ingreso = $('#input-fecha-ingreso').val().trim();
+/*	var fecha_ingreso = $('#input-fecha-ingreso').val().trim();
 	var fecha_salida = $('#input-fecha-salida').val().trim();
 	var cantidad_adultos = $('#cantidad_adultos').val().trim();
-	var cantidad_ninos = $('#cantidad_ninos').val().trim();
+	var cantidad_ninos = $('#cantidad_ninos').val().trim();*/
 	
 	if(nombre == "") {
-		$('#form_nombre').addClass('error');
+		$('#name').addClass('error');
 		errores = true;
 	} else {
-		$('#form_nombre').removeClass('error');
+		$('#name').removeClass('error');
 	}
-	if(telefono == "") {
+	/*if(telefono == "") {
 		$('#form_telefono').addClass('error');
 		errores = true;
 	} else {
 		$('#form_telefono').removeClass('error');
-	}
+	}*/
 	if((email == "")||(!validateEmail(email))) {
-		$('#form_email').addClass('error');
+		$('#email').addClass('error');
 		errores = true;
 	} else {
-		$('#form_email').removeClass('error');
+		$('#email').removeClass('error');
 	}
 	if(mensaje == "") {
 		$('#form_mensaje').addClass('error');
@@ -51,8 +51,8 @@ function validar_form() {
 		enviando =true;
 		$('#form_img_loading').addClass('on');
 		$('.send').addClass('off');
-		$.post('/contacto-ajax',{nombre: nombre, email: email, telefono: telefono, mensaje: mensaje,
-			fecha_ingreso: fecha_ingreso, fecha_salida: fecha_salida, cantidad_adultos: cantidad_adultos, cantidad_ninos: cantidad_ninos
+		$.post('/contacto-ajax',{nombre: nombre, email: email, /*telefono: telefono,*/ mensaje: mensaje/*,
+			fecha_ingreso: fecha_ingreso, fecha_salida: fecha_salida, cantidad_adultos: cantidad_adultos, cantidad_ninos: cantidad_ninos*/
 			}
 		,function(data) {
 			enviando = false;

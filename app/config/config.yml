@@ -90,7 +90,7 @@ easy_admin:
         form:
           fields:
             - { property: 'nombre' }
-            - { property: 'galeria', type: 'Comur\ImageBundle\Form\Type\CroppableGalleryType', type_options: { uploadConfig: { uploadUrl: 'uploads/galerias', webDir: 'uploads/galerias' }, cropConfig: { minWidth: 800, minHeight: 536, thumbs: { 0: { maxWidth: 300, maxHeight: 225, useAsFieldImage: true }, 1: { maxWidth: 489, maxHeight: 275, useAsFieldImage: true }, 2: { maxWidth: 215, maxHeight: 144, useAsFieldImage: true }  } } } }
+            - { property: 'galeria', type: 'Comur\ImageBundle\Form\Type\CroppableGalleryType', type_options: { uploadConfig: { uploadUrl: 'uploads/galerias', webDir: 'uploads/galerias' }, cropConfig: { minWidth: 640, minHeight: 480, thumbs: { 0: { maxWidth: 320, maxHeight: 240, useAsFieldImage: true }  } } } }
       Promocion:
         class: AppBundle\Entity\Promocion
         label: 'Promociones'
@@ -104,7 +104,7 @@ easy_admin:
             - { property: 'fechaVencimiento' }
             - { property: 'generica', label: 'Genérica' }
             - { property: 'descripcion' }
-            - { property: 'imagen', type: 'Comur\ImageBundle\Form\Type\CroppableImageType', type_options: { uploadConfig: { uploadUrl: 'uploads/promociones', webDir: 'uploads/promociones' }, cropConfig: { minWidth: 489, minHeight: 275 } } }
+            - { property: 'imagen', type: 'Comur\ImageBundle\Form\Type\CroppableImageType', type_options: { uploadConfig: { uploadUrl: 'uploads/promociones', webDir: 'uploads/promociones' }, cropConfig: { minWidth: 640, minHeight: 480 } } }
             - { property: 'orden' }
                   
             

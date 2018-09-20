@@ -2,6 +2,195 @@
 
 {% set interna = false %}
 {% block content %}
+		<section id="intro">
+            <div class="intro-container">
+                <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators"></ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="carousel-background">
+                                <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/001.jpg') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-background">
+                                <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/002.jpg') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-background">
+                                <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/003.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">  <span class="carousel-control-prev-icon fas fa-angle-left" aria-hidden="true"></span>  <span class="sr-only">Anterior</span></a>
+                    <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">  <span class="carousel-control-next-icon fas fa-angle-right" aria-hidden="true"></span>  <span class="sr-only">Siguiente</span></a>
+                </div>
+            </div>
+        </section>
+
+        <main id="main">
+
+	        {{ render(controller('AppBundle:Default:promociones')) }}
+
+            <section id="informacion">
+                <div class="container">
+                    <header class="section-header">
+                        <h2>Bienvenidos</h2>
+                    </header>
+                    <p class="wow fadeInUp">Bienvenido! Gracias por visitar nuestra web.</p>
+                    <p class="wow fadeInUp">Lo invitamos a recorrer nuestra página, donde podrá conocer nuestras instalaciones y servicios.</p>
+                    <p class="wow fadeInUp">Las Caracolas es un pequeño complejo con todo lo necesario para pasar unas agradables vacaciones en familia.</p>
+                    <p class="wow fadeInUp">Nos complacerá brindarle toda nuestra atención para hacerlo sentir como en su casa.</p>
+                </div>
+            </section>
+
+            <section id="apartamentos">
+                <div class="container">
+                    <header class="section-header wow fadeInUp">
+                        <h2>Los Departamentos</h2>
+                        <p>Los departamentos cuentan con cocinas equipadas con microondas, anafe de 2 hornallas, heladera y vajilla completa. Tv en el dormitorio principal y en el comedor.</p>
+                    </header>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Monoambiente</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2 Ambientes</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">3 Ambientes</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="ficha-layout">
+                                <div class="row">
+                                	{{ render(controller('AppBundle:Default:galeria',{id: 1})) }}
+                                    <div class="col-lg-6">
+                                        <h3>Monoambiente</h3>
+                                        <p class="text-left">Equipado para 2 personas.</p>
+                                        <ul class="main-list">
+                                            <li><i class="fas fa-check-circle"></i> Cocina equipada con microondas</li>
+                                            <li><i class="fas fa-check-circle"></i> Anafe de 2 hornallas</li>
+                                            <li><i class="fas fa-check-circle"></i> Heladera y vajilla completa</li>
+                                            <li><i class="fas fa-check-circle"></i> TV en el dormitorio principal y en el comedor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="ficha-layout">
+                                <div class="row">
+                                    {{ render(controller('AppBundle:Default:galeria',{id: 2})) }}
+                                    <div class="col-lg-6">
+                                        <h3>Departamento de 2 ambientes</h3>
+                                        <p class="text-left">Equipado para 2 o 4 personas.</p>
+                                        <ul class="main-list">
+                                            <li><i class="fas fa-check-circle"></i> Cocina equipada con microondas</li>
+                                            <li><i class="fas fa-check-circle"></i> Anafe de 2 hornallas</li>
+                                            <li><i class="fas fa-check-circle"></i> Heladera y vajilla completa</li>
+                                            <li><i class="fas fa-check-circle"></i> TV en el dormitorio principal y en el comedor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="ficha-layout">
+                                <div class="row">
+                                    {{ render(controller('AppBundle:Default:galeria',{id: 3})) }}
+                                    <div class="col-lg-6">
+                                        <h3>Departamento de 3 ambientes</h3>
+                                        <p class="text-left">Equipado para 6 personas.</p>
+                                        <ul class="main-list">
+                                            <li><i class="fas fa-check-circle"></i> Cocina equipada con microondas</li>
+                                            <li><i class="fas fa-check-circle"></i> Anafe de 2 hornallas</li>
+                                            <li><i class="fas fa-check-circle"></i> Heladera y vajilla completa</li>
+                                            <li><i class="fas fa-check-circle"></i> TV en el dormitorio principal y en el comedor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicios" class="section-bg">
+                <div class="container">
+                    <header class="section-header wow fadeInUp">
+                        <h2>Comodidades y servicios</h2>
+                    </header>
+                    <ul class="wow fadeInUp">
+                        <li><i class="fas fa-check-square"></i> Priscina con hidromasaje descubierto</li>
+                        <li><i class="fas fa-check-square"></i> Internet WIFI</li>
+                        <li><i class="fas fa-check-square"></i> Estacionamiento</li>
+                        <li><i class="fas fa-check-square"></i> Teléfono en habitaciones</li>
+                        <li><i class="fas fa-check-square"></i> Jardines</li>
+                        <li><i class="fas fa-check-square"></i> Mucama y ropa blanca</li>
+                        <li><i class="fas fa-check-square"></i> TV por cable</li>
+                        <li><i class="fas fa-check-square"></i> Parrillas individuales</li>
+                        <li><i class="fas fa-check-square"></i> Desayuno</li>
+                        <li><i class="fas fa-check-square"></i> Microondas</li>
+                        <li><i class="fas fa-check-square"></i> Heladera</li>
+                        <li><i class="fas fa-check-square"></i> No se aceptan mascotas</li>
+                        <li><i class="fas fa-check-square"></i> Caja de seguridad</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ubicacion">
+                <div class="container">
+                    <div class="section-header wow fadeInUp">
+                        <h2>Ubicacion</h2>
+                        <p>El complejo se encuentra ubicado en Del Dorado 941, Pinamar, Buenos Aires.</p>
+                    </div>
+                </div>
+                <div id="map-container" class="wow fadeInUp"></div>
+            </section>
+
+            <section id="contacto">
+                <div class="container">
+                    <div class="section-header wow fadeInUp">
+                        <h2>Contacto</h2>
+                    </div>
+                    <div class="form">
+                        <div id="sendmessage">Su consulta ha sido enviada. Gracias!</div>
+                        <div id="errormessage"></div>
+                        <form id="form_contacto" role="form" class="contactForm" method="post" onsubmit="return validar_form();">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres"/>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Por favor ingrese un email válido"/>
+                                    <div class="validation"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="form_mensaje" rows="5" data-rule="required" data-msg="Por favor escriba un mensaje" placeholder="Mensaje"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="text-center">
+                                <button class="send" type="submit">Enviar Mensaje</button>
+                                {#<a href="" class="send">Enviar</a>#}
+        						<div class="spinner" id="form_img_loading">
+            						<div class="rect1"></div>
+            						<div class="rect2"></div>
+            						<div class="rect3"></div>
+            						<div class="rect4"></div>
+            						<div class="rect5"></div>
+            					</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+{% endblock %}
+
+{% block contenta %}
 <!--
     ####################################################
     C A R O U S E L

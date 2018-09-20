@@ -1,18 +1,21 @@
-
-	 <!-- promociones -->
-    <div class="container mt-5" id="promociones">
-        <div class="row">
-        	{% for promocion in promociones %}
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" alt="Luces del Bosque - Mar de las Pampas" src="{{ asset('/uploads/promociones/' ~ promocion.imagen) }}" />
-                    <div class="card-body">
-                        <h4 class="card-title">{{ promocion.nombre }}</h4>
-                        <p class="card-text">{{ promocion.descripcion|nl2br }}</p>
+			<section id="promociones">
+                <div class="container">					
+					<div class="row">
+						{% for promocion in promociones %}
+                        <div class="col-md-4 wow fadeInUp">
+                            <div class="promocion">
+                                <figure>
+                                    <img src="{{ asset('/uploads/promociones/' ~ promocion.imagen) }}" alt="">
+                                </figure>
+                                <div class="promocion__content">
+                                    <h2 class="title">{{ promocion.nombre }}</h2>
+                                    <p>{{ promocion.descripcion|nl2br }}</p>
+                                    {# <a href="">Más información</a> #}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                </div>                     
-            </div>
-        	{% endfor %}
-        </div>
-    </div>
+				</div>
+			</section>                   
 
