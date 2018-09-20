@@ -51,7 +51,7 @@ function validar_form() {
 		enviando =true;
 		$('#form_img_loading').addClass('on');
 		$('.send').addClass('off');
-		$.post('/contacto-ajax',{nombre: nombre, email: email, /*telefono: telefono,*/ mensaje: mensaje/*,
+		$.get('/contacto-ajax',{nombre: nombre, email: email, /*telefono: telefono,*/ mensaje: mensaje/*,
 			fecha_ingreso: fecha_ingreso, fecha_salida: fecha_salida, cantidad_adultos: cantidad_adultos, cantidad_ninos: cantidad_ninos*/
 			}
 		,function(data) {
