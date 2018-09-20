@@ -1,0 +1,15 @@
+			<strong>Nombre</strong>: {{ nombre }} <br />
+			<strong>Tel&eacute;fono</strong>: {{ telefono }} <br />
+			<strong>Mail</strong>: {{ email }} <br />
+			{% if fecha_ingreso %}
+			<strong>Fecha Ingreso</strong>: {{ fecha_ingreso.format('d/m/Y') }} <br />
+			{% endif %}
+			{% if fecha_salida %}
+			<strong>Fecha Salida</strong>: {{ fecha_salida.format('d/m/Y') }} <br />
+			{% endif %}
+			<strong>Cantidad adultos</strong>: {{ cantidad_adultos }} <br />
+			<strong>Cantidad ni&ntilde;os</strong>: {{ cantidad_ninos }} <br />
+			<strong>Mensaje</strong>:<br />
+			<p>{{ mensaje|nl2br }}</p>
+			
+			

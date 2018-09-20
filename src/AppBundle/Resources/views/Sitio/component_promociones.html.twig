@@ -1,0 +1,18 @@
+
+	 <!-- promociones -->
+    <div class="container mt-5" id="promociones">
+        <div class="row">
+        	{% for promocion in promociones %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" alt="Luces del Bosque - Mar de las Pampas" src="{{ asset('/uploads/promociones/' ~ promocion.imagen) }}" />
+                    <div class="card-body">
+                        <h4 class="card-title">{{ promocion.nombre }}</h4>
+                        <p class="card-text">{{ promocion.descripcion|nl2br }}</p>
+                    </div>
+                </div>                     
+            </div>
+        	{% endfor %}
+        </div>
+    </div>
+

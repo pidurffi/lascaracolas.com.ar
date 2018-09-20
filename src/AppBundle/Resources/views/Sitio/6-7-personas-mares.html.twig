@@ -1,0 +1,63 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% set interna = true %}
+
+{% block content %}
+		<div class="container mt-5 mb-5" id="comodidades">
+            <div class="title-wrapper text-left">
+                <h2>Cabaña Mares para 6 a 7 personas</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Baja</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Dormitorio con 2 Sommiers individuales</li>
+                        <li><i class="fas fa-check"></i>Cocina equipada con Heladera con Freezer, Microondas, Cafetera Eléctrica, Licuadora</li>                         
+                        <li><i class="fas fa-check"></i>Amplio Comedor/Estar con sillones, LCD 32"</li>
+                        <li><i class="fas fa-check"></i>Hogar a Leños</li> 
+                    </ul>                     
+                </div>
+
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Alta</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Dormitorio principal con cama tipo Sommier de 1,60m Queen, A. Acondicionado y LCD 32"</li>
+                        <li><i class="fas fa-check"></i>Baño completo con Hidromasaje</li>                         
+                        <li><i class="fas fa-check"></i>Dormitorio con 2 o 3 Sommiers indiv. y  Ventilador de Techo</li>
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5" id="servicios">
+            <div class="row">
+                <div class="col">
+                    {{ render(controller('AppBundle:Default:galeria',{galeria_id: 9})) }}
+                </div>
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h2>Además</h2>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li>
+                            <i class="fas fa-check"></i>Caja de Seguridad
+                        </li>                         
+                        <li>
+                            <i class="fas fa-check"></i>Alarma
+                        </li>   
+                        <li>
+                            <i class="fas fa-check"></i>Amplio deck con Parrilla individual techada
+                        </li>   
+                        <li>
+                            <i class="fas fa-check"></i>Mobiliario de Jardín
+                        </li>                                             
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

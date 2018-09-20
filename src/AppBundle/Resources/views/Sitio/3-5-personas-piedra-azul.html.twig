@@ -1,0 +1,64 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% set interna = true %}
+
+{% block content %}
+		<div class="container mt-5 mb-5" id="comodidades">
+            <div class="title-wrapper text-left">
+                <h2>Cabaña Piedra Azul para 3 a 5 personas</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Baja</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Cocina equipada con Heladera con Freezer, Microondas, Cafetera Eléctrica, Licuadora</li>
+                        <li><i class="fas fa-check"></i>Comedor/Estar con sillones, LCD 40"</li>                         
+                        <li><i class="fas fa-check"></i>Hogar a Leños</li> 
+                    </ul>                     
+                </div>
+
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Alta</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Dormitorio principal con cama tipo Sommier, Equipo  Frío-Calor y LCD 32"</li>
+                        <li><i class="fas fa-check"></i>Jacuzzi Doble en Suite, modelo rectangular</li>                         
+                        <li><i class="fas fa-check"></i>Baño completo</li>
+                        <li><i class="fas fa-check"></i>Dormitorio con 2 camas indiv.y Ventilador de Techo</li>
+                        <li><i class="fas fa-check"></i>Baño compartimentado en nivel intermedio</li>
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5" id="servicios">
+            <div class="row">
+                <div class="col">
+                    {{ render(controller('AppBundle:Default:galeria',{galeria_id: 6})) }}
+                </div>
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h2>Además</h2>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li>
+                            <i class="fas fa-check"></i>Caja de Seguridad
+                        </li>                         
+                        <li>
+                            <i class="fas fa-check"></i>Alarma
+                        </li>   
+                        <li>
+                            <i class="fas fa-check"></i>Deck con Parrilla individual y galería techada
+                        </li>   
+                        <li>
+                            <i class="fas fa-check"></i>Mobiliario de Jardín
+                        </li>                                             
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

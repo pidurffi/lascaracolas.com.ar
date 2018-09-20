@@ -1,0 +1,25 @@
+{% set i = 0 %}
+{% for galeria in galerias %}
+    {% for gal in galeria.galeria if i == 0%}
+        <img class="card-img-top" alt="Luces del Bosque - Mar de las Pampas" src="{{ asset('/uploads/galerias/gallery/' ~ gal) }}"/>
+        {% set i = 1 %}
+    {% endfor %}
+{% endfor %}
+
+<div class="galeria-interna" style="margin-top: 40px">
+    {% set i = 0 %}
+    {% for galeria in galerias %}
+        <div class="row"> 
+        {% for gal in galeria.galeria %}
+            {% if i > 0 %}
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <a class="d-block mb-4 h-100" href="{{ asset('/uploads/galerias/gallery/' ~ gal) }}" rel="lightbox-galeria"> 
+                        <img class="img-fluid img-thumbnail" alt="Luces del Bosque - Mar de las Pampas" src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(215,144) }}"/>
+                    </a>
+                </div>
+            {% endif %}
+            {% set i = 1 %}
+        {% endfor %}
+        </div>
+    {% endfor %}
+</div>

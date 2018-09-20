@@ -1,0 +1,62 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% set interna = true %}
+
+{% block content %}
+		<div class="container mt-5 mb-5" id="comodidades">
+            <div class="title-wrapper text-left">
+                <h2>Cabaña Exclusiva para 4 a 5 personas</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Baja</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Cocina equipada con Heladera con Freezer, Microondas, Cafetera Eléctrica, Licuadora</li>                         
+                        <li><i class="fas fa-check"></i>Amplio Comedor/Estar con sillones, LCD 32"</li>                         
+                        <li><i class="fas fa-check"></i>Hogar a Leños/Salamandra “TROMEN” con doble Visor de Fuego</li>                         
+                        <li><i class="fas fa-check"></i>Sofá-Cama</li>                                          
+                    </ul>                     
+                </div>
+
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h3>Planta Alta</h3>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li><i class="fas fa-check"></i>Dormitorio principal con cama tipo Sommier de 1,60m Queen, Equipo Frío-Calor y LCD 40” Smart y Ventilador de Techo</li>                         
+                        <li><i class="fas fa-check"></i>Jacuzzi Doble, modelo esquinero/rectangular en Suite</li>                         
+                        <li><i class="fas fa-check"></i>Baño completo en Suite"</li>                         
+                        <li><i class="fas fa-check"></i>Dormitorio con  2 ó 3 Sommiers indiv., Ventilador de Techo</li>                         
+                        <li><i class="fas fa-check"></i>Baño completo en Suite</li>
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5" id="servicios">
+            <div class="row">
+                <div class="col">
+                    {{ render(controller('AppBundle:Default:galeria',{galeria_id: 5})) }}
+                </div>
+                <div class="col">
+                    <div class="title-wrapper text-left">
+                        <h2>Además</h2>
+                    </div>
+                    <ul class="list list-unstyled theme-color">
+                        <li>
+                            <i class="fas fa-check"></i>Caja de Seguridad
+                        </li>                         
+                        <li>
+                            <i class="fas fa-check"></i>Piso de laja con parrilla individual
+                        </li>   
+                        <li>
+                            <i class="fas fa-check"></i>Mobiliario de Jardín
+                        </li>                                             
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

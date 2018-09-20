@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Cabañas en Mar de las Pampas - Luces del Bosque</title>
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('bundles/app/maquetado/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/app/maquetado/css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/app/maquetado/css/photoswipe.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/app/maquetado/css/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bundles/app/maquetado/css/slimbox/slimbox2.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+        <!-- Custom styles for this template -->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald|PT+Serif" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    </head>
+    <body class="mt-0 pt-0">
+        <div id="top-menu" class="container d-none d-md-block">
+            <div class="row">
+                <div class="col-sm-8">
+                    <i class="telefono-top fas fa-phone"></i> (02255) 45-4780
+                </div>
+                <div class="redes-sociales col-sm-4 text-right">
+                    <a target="_blank" href="https://www.facebook.com/lucesdelbosquemardelaspampas/"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a target="_blank" href="https://www.tripadvisor.com.ar/Hotel_Review-g2010225-d3398605-Reviews-Luces_del_Bosque-Mar_de_las_Pampas_Province_of_Buenos_Aires_Central_Argentina.html"><i class="fab fa-tripadvisor fa-lg"></i></a>
+                    <span data-toggle="tooltip" data-placement="bottom" title="Sin T.A.C.C."><i class="fab fa-pagelines fa-lg"></i></span>
+                </div>
+            </div>
+        </div>
+        <div id="menu1" class="sticky-top container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img alt="Luces del Bosque - Mar de las Pampas" src="images/logo.png" class="img-fluid logoluces" width="auto">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <!--
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">INICIO<span class="sr-only">(current)</span></a>
+                            </li>
+                            -->
+                            <li class="nav-item">
+                            	<li><a class="nav-link" {% if app.request.attributes.get('_route') == 'homepage' %} data-scroll href="#servicios"{% else %}href="{{ path('homepage') }}#servicios"{% endif %}>SERVICIOS</a></li>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LAS CABAÑAS</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">2 Personas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-2-personas-superior') }}">Superior</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-2-personas-premium') }}">Premium</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-2-personas-classic') }}">Classic</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">3 / 5 Personas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-3-5-personas-exclusivas') }}">Cabañas Exclusivas</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-3-5-personas-piedra-azul') }}">Cabaña Piedra Azul</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-3-5-personas-el-puente') }}">Cabaña El Puente</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">6 / 7 Personas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-6-7-personas-cortaderas') }}">Cabaña Cortaderas</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('cabanas-6-7-personas-mares') }}">Cabaña Mares</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            <li class="nav-item">
+                            	<li><a class="nav-link" {% if app.request.attributes.get('_route') == 'homepage' %} data-scroll href="#galeria"{% else %}href="{{ path('homepage') }}#galeria"{% endif %}>FOTOS</a></li>
+                            </li>
+                            <li class="nav-item">
+                            	<li><a class="nav-link" {% if app.request.attributes.get('_route') == 'homepage' %} data-scroll href="#mapa"{% else %}href="{{ path('homepage') }}#mapa"{% endif %}>UBICACIÓN</a></li>
+                            </li>
+                            <li class="nav-item">
+                            	<li><a class="nav-link" {% if app.request.attributes.get('_route') == 'homepage' %} data-scroll href="#footer"{% else %}href="{{ path('homepage') }}#footer"{% endif %}>CONTACTO</a></li>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        {% block content %}
+        
+        {% endblock %}
+        
+        <!-- Placed at the end of the document so the pages load faster -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <footer class="page-footer font-small stylish-color-dark pt-4 mt-4 bg-dark" id="footer">
+            <!--Footer Links-->             
+            <div class="container text-center text-md-left">
+                <!-- Footer links -->
+                <div class="row text-center text-md-left mt-3 pb-3"> 
+                    <!--First column-->                     
+                    <div class="col-md-6">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">CONTACTO</h6>
+                        <p><i class="fa fa-home mr-3"></i>Ricardo Güiraldes entre Las Acacias y J. Repetto</p>
+                        <p><i class="fa fa-envelope mr-3"></i>info@lucesdelbosque.com</p>
+                        <p><i class="fa fa-phone mr-3"></i>(02255) 45-4780</p>
+                        <p><i class="fab fa-whatsapp mr-3"></i>WhatsApp: +54 9 2255 52-0198</p>
+                    </div>                     
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">MENÚ</h6>
+                        <p><a href="#!">INICIO</a></p>
+                        <p><a href="#!">SERVICIOS</a></p>
+                        <p><a href="#!">GALERÍA DE FOTOS</a></p>
+                    </div>                     
+                    <div class="col-md-4">
+                        <div class="container">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">CONSULTAS</h6>
+                            <form   id="form_contacto"  method="post" onsubmit="return validar_form();">
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <input class="form-control"  type="email" placeholder="Mail" id="form_email">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" placeholder="Ingreso" id="input-fecha-ingreso">
+                                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                <div class="input-group-text">
+                                                    <i class="fa fa-calendar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" placeholder="Salida" id="input-fecha-salida">
+                                            <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                                <div class="input-group-text">
+                                                    <i class="fa fa-calendar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <input class="form-control " type="text" placeholder="Nombre" id="form_nombre">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <input class="form-control " type="text" placeholder="Tel&eacute;fono" id="form_telefono">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <select class="form-control" id="cantidad_adultos"> 
+                                        	<option value="">Cantidad Adultos</option>
+                                            <option value="1">1</option>                                             
+                                            <option value="2">2</option>                                             
+                                            <option value="3">3</option>                                             
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" id="cantidad_ninos"> 
+                                        	<option value="">Cantidad Ni&ntilde;os</option>
+                                            <option value="1">1</option>                                             
+                                            <option value="2">2</option>                                             
+                                            <option value="3">3</option>                                             
+                                        </select>                                         
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <textarea class="form-control" rows="3"  id="form_mensaje"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+		        						<a href="" class="send">Enviar</a>
+		        						<div class="spinner" id="form_img_loading">
+                    						<div class="rect1"></div>
+                    						<div class="rect2"></div>
+                    						<div class="rect3"></div>
+                    						<div class="rect4"></div>
+                    						<div class="rect5"></div>
+                    					</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>                         
+                    </div>
+                    <!-- Footer links -->
+                    <hr>
+                </div>
+        </footer>
+        <!--/.Footer-->
+        <script src="{{ asset('bundles/app/maquetado/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/popper.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/photoGallery.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/photoswipe.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/photoswipe-ui.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/moment.js') }}"></script>
+        <script src="{{ asset('bundles/app/maquetado/js/slimbox2.js') }}"></script>
+        <script src="{{ asset('bundles/app/js/contacto.js') }}"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyCaJw8REV5CNiAQbirsgFxKonBLjAankBM"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/maquetado/js/functions.js') }}"></script>
+        <script type="text/javascript">
+            $(function () {
+            	$('#datetimepicker1').datetimepicker({
+            		locale: 'es',
+            		format: 'DD/MM/YYYY'
+                });
+            	$('#datetimepicker2').datetimepicker({
+            		locale: 'es',
+            		format: 'DD/MM/YYYY',
+            		useCurrent: false //Important! See issue #1075
+                });
+            	$("#datetimepicker1").on("change.datetimepicker", function (e) {
+                    $('#datetimepicker2').datetimepicker('minDate',(e.date));
+                });
+                $("#datetimepicker2").on("change.datetimepicker", function (e) {
+                    $('#datetimepicker1').datetimepicker('maxDate',(e.date));
+                });
+            });
+        </script>
+        <!-- Just to make our placeholder images work. Don't actually copy the next line! 
+        <script src="assets/js/holder.min.js"></script>-->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    </body>
+</html>
