@@ -1,0 +1,22 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: bf_lascaracolas
+    database_user: bf_lascaracolas
+    database_password: 
+#    database_name: web451_mansion
+#    database_user: web451_mansion
+#    database_password: GogAtdH84dwu    
+    mailer_transport: smtp
+    mailer_host: mail.lucesdelbosque.com.ar
+    mailer_user: webmaster@lucesdelbosque.com
+    mailer_password: PO8QJFTLH5G2
+    mailer_port: 587
+    mailer_encryption: ~
+    secret: 681ec15606bf7b3b838c03ff3b86031b39cbeb7c
+    asunto_contacto: Contacto de _nombre_ desde www.lucesdelbosque.com.ar
+    contacto_from: webmaster@lucesdelbosque.com
+    contacto_to: gabryel@gmail.com
+#    contacto_to: info@lucesdelbosque.com.ar
+    
