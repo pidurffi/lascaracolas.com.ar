@@ -491,7 +491,7 @@ section.section-bg {
 /* line 420, ../sass/styles.scss */
 #informacion {
   padding: 10px;
-  background-image: url(http://www.myrto-apartments.gr/wp-content/uploads/2014/03/seashell.jpg);
+  background-image: url(../img/caracol.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
