@@ -378,6 +378,9 @@ section {
 
 #promociones {
 	.promocion {
+	    position: relative;
+	    height: 100%;
+	    background-color: #f8f8f8;
 		figure {
 			overflow: hidden;
 			margin: 0;
@@ -388,7 +391,7 @@ section {
 			}
 		}
 		.promocion__content {
-			padding: 20px;
+			padding: 10px;
 			background-color: #f8f8f8;
 			h2 {
 				color: $grey;
