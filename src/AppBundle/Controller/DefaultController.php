@@ -44,8 +44,8 @@ class DefaultController extends Controller
      */
     public function contactoAjaxAction(Request $request) {
     	$rta = array('ok'=>0,'error'=>0);
-    	$fuente_datos = $request->query; 
-    	//$fuente_datos = $request->request;
+    	//$fuente_datos = $request->query; 
+    	$fuente_datos = $request->request;
     	$nombre = $fuente_datos->get('nombre','');
     	//$telefono = $fuente_datos->get('telefono','');
     	$email = $fuente_datos->get('email','');
@@ -115,7 +115,6 @@ class DefaultController extends Controller
     		//throw $ex;
     		error_log("Imposible enviar email de contacto ".$ex->getMessage());
     	}
-    	return array();
     	return new JsonResponse($rta);
     }
 }
