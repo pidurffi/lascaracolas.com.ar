@@ -37,6 +37,14 @@ class DefaultController extends Controller
     	$galeria = $this->getDoctrine()->getRepository('AppBundle:Galeria')->find($id);
     	return array('galeria'=>$galeria);
     }
+
+	/**
+     * @Template("AppBundle:Sitio:component_galeria_general.html.twig")
+     */
+    public function galeriaGeneralAction(Request $request,$id) {
+    	$galeria = $this->getDoctrine()->getRepository('AppBundle:Galeria')->find($id);
+    	return array('galeria'=>$galeria);
+    }
     
     /**
      * @Route("/contacto-ajax",name="contacto-ajax")
@@ -115,6 +123,7 @@ class DefaultController extends Controller
     		//throw $ex;
     		error_log("Imposible enviar email de contacto ".$ex->getMessage());
     	}
+    	
     	return new JsonResponse($rta);
     }
 }

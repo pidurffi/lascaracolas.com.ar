@@ -1,0 +1,16 @@
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <div class="row">
+        {% set primera = true %}
+        {% for gal in galeria.galeria %}
+        <figure class="{% if primera %}mobile-thumb{% endif %} col-sm-3 wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" itemprop="contentUrl" data-size="680x390">
+                <img src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(320,240) }}" itemprop="thumbnail" alt="Image description" />
+                {% if primera %}
+                <span class="mobile-label">Ver galeria</span>
+                {% endif %}
+            </a>
+        </figure>
+        {% set primera = false %}
+        {% endfor %}
+    </div>
+</div>

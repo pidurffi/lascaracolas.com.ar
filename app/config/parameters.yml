@@ -2,21 +2,21 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: bf_lascaracolas
-    database_user: bf_lascaracolas
-    database_password: N7NIRFX0Z9T0
+    database_name: lascarac_db
+    database_user: lascarac_user
+    database_password: )9X+E.A-fW&;
 #    database_name: web451_mansion
 #    database_user: web451_mansion
 #    database_password: GogAtdH84dwu    
     mailer_transport: smtp
     mailer_host: mail.lascaracolas.com.ar 
     mailer_user: info@lascaracolas.com.ar 
-    mailer_password: Wzy$v#c=+O0B
+    mailer_password: YsS3mU2W7KAy
     mailer_port: 465
     mailer_encryption: tls
     secret: 681ec15606bf7b3b838c03ff3b86031b39cbeb7c
     asunto_contacto: Contacto de _nombre_ desde www.lascaracolas.com.ar 
     contacto_from: info@lascaracolas.com.ar 
-    contacto_to: gabryel@gmail.com
-#    contacto_to: info@lucesdelbosque.com.ar
+#    contacto_to: gabryel@gmail.com
+    contacto_to: info@lascaracolas.com.ar
     
